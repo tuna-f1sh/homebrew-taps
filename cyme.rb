@@ -1,15 +1,17 @@
 class Cyme < Formula
   desc "List system USB buses and devices; a modern and compatiable `lsusb`"
   homepage "https://github.com/tuna-f1sh/cyme"
-  url "https://github.com/tuna-f1sh/cyme/archive/refs/tags/0.7.8.tar.gz"
+  url "https://github.com/tuna-f1sh/cyme/releases/download/0.7.8/cyme-v0.7.8-x86_64-apple-darwin.tar.gz"
   version "0.7.8"
-  sha256 "ec11f3314257dfba743e56f9c4534425af39ec6e1088095ccd197373d28f0be5"
+  sha256 "adf7130d5b414d4045f945f87e32d812992a175968447b9012ea7239a18498ca"
   license "GPL-3.0-or-later"
 
-  depends_on "rust" => :build
-
   def install
-    system "cargo", "install", *std_cargo_args
+    bin.install "cyme"
+    man1.install "cyme.1"
+    bash_completion.install "./autocomplete/cyme.bash"
+    zsh_completion.install "./autocomplete/_cyme"
+    fish_completion.install "./autocomplete/cyme.fish"
   end
 
   test do
