@@ -5,6 +5,7 @@ class Cyme < Formula
   version "1.2.4"
   sha256 "85c1740ebd5e33d0d4112759859dbf80605bf03afb3c65dd1a049c6b5958f420"
   license "GPL-3.0-or-later"
+  depends_on "libusb"
 
   def install
     bin.install "cyme"
