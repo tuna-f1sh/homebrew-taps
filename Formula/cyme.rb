@@ -13,6 +13,7 @@ class Cyme < Formula
     bash_completion.install "./autocomplete/cyme.bash"
     zsh_completion.install "./autocomplete/_cyme"
     fish_completion.install "./autocomplete/cyme.fish"
+    ohai "For an 'lsusb' command using cyme, add \`alias lsusb='cyme --lsusb'\` to one's shell startup"
   end
 
   test do
