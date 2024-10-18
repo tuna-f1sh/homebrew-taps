@@ -1,10 +1,9 @@
 class Cyme < Formula
-  desc "List system USB buses and devices; a modern and compatiable `lsusb`"
+  desc "List system USB buses and devices. A modern cross-platform lsusb that attempts to maintain compatibility with, but also add new features."
   homepage "https://github.com/tuna-f1sh/cyme"
   url "https://github.com/tuna-f1sh/cyme/releases/download/v2.0.0/cyme-v2.0.0-universal-apple-darwin.tar.gz"
   sha256 "0d78a6d366735c7ef3d8cd175094db346cef69d078e038ed97a47439f828fcbb"
   license "GPL-3.0-or-later"
-  depends_on "libusb"
 
   def install
     bin.install "cyme"
