@@ -15,6 +15,10 @@ class Cyme < Formula
   end
 
   test do
-    system "false"
+    # Test fails on headless CI
+    return if OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"]
+
+    output = JSON.parse(shell_output("#{bin}/cyme --tree --json"))
+    assert_predicate output["buses"], :present?
   end
 end
