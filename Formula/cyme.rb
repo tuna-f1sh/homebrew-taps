@@ -1,8 +1,8 @@
 class Cyme < Formula
   desc "List system USB buses and devices. A modern cross-platform lsusb."
   homepage "https://github.com/tuna-f1sh/cyme"
-  url "https://github.com/tuna-f1sh/cyme/releases/download/v2.2.4/cyme-v2.2.4-universal-apple-darwin.tar.gz"
-  sha256 "5d157dde8ebaff95e3bf4191d4a05cd1ca869b19e4af8332b1df09d56f73ebb2"
+  url "https://github.com/tuna-f1sh/cyme/releases/download/v2.2.5/cyme-v2.2.5-universal-apple-darwin.tar.gz"
+  sha256 "288caa6415b8679152fbecafcfd55b715a723d1248f0a709402e5b25d8850119"
   license "GPL-3.0-or-later"
 
   def install
